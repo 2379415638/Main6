@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topic</title>
+</head>
+{% extends 'base.html' %}
+<body>
+{% block content %}
+    <a href="{% url 'notes:create_topic' %}">Add a new Topic now!</a>
+    <ul>
+    {% for topic in topics %}
+        <li><a href="{% url 'notes:topic' topic.id %}"><b>{{ topic }}</b></a></li>
+        {% empty %}
+        No topics added recently.
+    {% endfor %}
+    </ul>
+{% endblock %}
+</body>
+</html>

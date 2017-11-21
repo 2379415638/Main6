@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create your entry!</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+    <form method="post">
+    {% csrf_token %}
+       {{ form.as_p }}
+        <center>
+        <input value="submit" type="submit" name="submit">
+    <input name="resrt" type="reset" value="reset">
+        </center>
+    </form>
+{% endblock %}
+</body>
+</html>

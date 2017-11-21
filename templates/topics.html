@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% extends 'base.html' %}
+<body>
+{% block content %}
+    <a href="{% url 'notes:del_topic' topic.id %}"><input type="button" value="Delete this topic"></a>
+    <a href="{% url 'notes:create_entry' topic.id%}"><input type="button" value="Add Entry"></a>
+    <ul>
+    {% for entry in entries %}
+        <li><a href="{% url 'notes:entry' topic.id entry.id%}">{{ entry|truncatechars:15 }}...</a></li>
+        {% empty %}
+        No entry added recently.
+    {% endfor %}
+    </ul>
+{% endblock %}
+</body>
+</html>

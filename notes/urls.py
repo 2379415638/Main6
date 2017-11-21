@@ -9,5 +9,8 @@ urlpatterns = [
     url(r'^topics/user/$',views.user,name = 'user'),
     url(r'^pesonal/$',views.personal,name = 'person'),
     url(r'^create_topic/$',views.create_topic,name = 'create_topic'),
+    url(r'^(\d+)del_topic/$',views.del_topic,name = 'del_topic'),
     url(r'^(\d+)/create_entry/$',views.create_entry,name = 'create_entry'),
+    url(r'^(\d+)/(\d+)/edit_entry/$',views.edit_entry,name = 'edit_entry'),
+    url(r'^(\d+)/(\d+)/del_entry/$',views.del_entry,name = 'del_entry'),
 ]

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <title>Notes</title>
+</head>
+<body>
+<h1 align="left"><a href="{% url 'notes:index' %}">Notes</a>--<a href="{% url 'notes:Topic' %}">Topics</a>--<a href="{% url 'notes:user' %}">Login</a></h1>
+<hr>
+<h1 align="center">Here are my notes！</h1>
+<center><iframe src="time.html" frameborder="0" align="center" height="100" >
+</iframe>
+</center>
+</body>
+{% block content%}
+{% endblock %}
+</html>
