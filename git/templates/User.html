@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+<center>
+    {{ response }}
+<form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+     <input value="submit" type="submit" name="submit">
+    <input name="resrt" type="reset" value="reset">
+</form>
+</center>
+{% endblock %}
+</body>
+</html>

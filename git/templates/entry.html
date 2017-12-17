@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entry</title>
+</head>
+{% extends 'base.html' %}
+<body>
+{% block content %}
+    <a href="{% url 'notes:edit_entry' topic.id entry.id%}"><input type="button" value="Edit"></a>
+    <a href="{% url 'notes:del_entry' topic.id entry.id %}"><input type="button" value="Delete"></a>
+    <ul>
+        <li><p>{{ entry }}        {{ entry.content_time }}</p></li>
+    </ul>
+{% endblock %}
+</body>
+</html>

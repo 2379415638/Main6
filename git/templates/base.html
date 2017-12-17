@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <title>Notes</title>
+</head>
+<body>
+{#<ul>#}
+{#    <li><a href="{% url 'notes:index' %}">Notes</a></li>#}
+{#    <li><a href="{% url 'notes:Topic' %}">Topics</a></li>#}
+{#    <li><a href="{% url 'notes:user' %}">Login</a></li>#}
+{#</ul>#}
+<div>
+<table>
+    <tr>
+        <td><a href="{% url 'notes:index' %}">Notes</a></td>
+        <td><a href="{% url 'notes:Topic' %}">Topics</a></td>
+        {% if username%}
+            <td>{{ username }},<a href="{% url 'notes:logout' %}">Logout</a></td>
+            {% else %}
+            <td><a href="{% url 'notes:login' %}">Login</a> </td>
+        {% endif %}
+    <td><a href="{% url 'notes:user' %}">Sign In</a></td>
+    </tr>
+</table>
+</div>
+<hr>
+<h1 align="center">Here are my notes！</h1>
+<center><iframe src="time.html" frameborder="0" align="center" height="100" >
+</iframe>
+</center>
+</body>
+{% block content%}
+{% endblock %}
+</html>

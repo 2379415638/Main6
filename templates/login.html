@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+{% extends 'base.html' %}
+<body>
+{% block content %}
+    <p align="center">Login</p>
+    <form  method="post" name="my form">
+    {% csrf_token %}
+        <center>{{ form.as_table }}
+        <input value="submit" type="submit" name="submit">
+    <input name="resrt" type="reset" value="reset">
+               </center>
+    </form>
+    {% if response == "Yes" %}
+        <em>登陆成功！</em>
+        {% elif id == None%}
+        {% else %}
+        <em>账号密码错误,请重试！</em>
+        {% endif %}
+
+{% endblock %}
+</body>
+</html>
