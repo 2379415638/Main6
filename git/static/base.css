@@ -1,0 +1,38 @@
+.background{
+            background: url("/static/image/register.jpg");
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+.font{
+    font-size: 20px;
+    color: #d1e4ff;
+    font-family:华文楷体;
+}
+.mainbutton{
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 0;
+}
+.mainbuttonhover:hover{
+    width:60px;
+    height:60px;
+    color:lightgray;
+    font-weight: bold;
+}
+.submitbutton{
+    width: 100px;
+    height: 35px;
+    background-color:lightgray;
+    border:0;
+}
+.submitbuttonhover:hover{
+    width:100px;
+    height:35px;
+    background-color:gray;
+    font-weight:bold;
+}
+.headerdiv{
+  
+   background-color: rgba(217,244,255,0.35);
+}

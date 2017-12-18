@@ -3,41 +3,26 @@
 <head>
     <meta charset="UTF-8" >
     <title>Notes</title>
-        <style>
-        .background{
-            background: url("/static/image/register.jpg");
-            background-repeat:no-repeat;
-            background-size: cover;
-        }
-            .button{
-            }
-    </style>
+    <link href="/static/base.css" rel="stylesheet" type="text/css">
 </head>
 <body class="background">
-{#<ul>#}
-{#    <li><a href="{% url 'notes:index' %}">Notes</a></li>#}
-{#    <li><a href="{% url 'notes:Topic' %}">Topics</a></li>#}
-{#    <li><a href="{% url 'notes:user' %}">Login</a></li>#}
-{#</ul>#}
-<div>
-<table>
+<div class="headerdiv">
+<table class="font">
     <tr>
-        <td><a href="{% url 'notes:index' %}">Notes</a></td>
-        <td><a href="{% url 'notes:Topic' %}">Topics</a></td>
+        <td><a href="{% url 'notes:index' %}"><button class="mainbutton mainbuttonhover">Site</button></a></td>
+        <td><a href="{% url 'notes:Topic' %}"><button class="mainbutton mainbuttonhover">Topics</button></a></td>
         {% if username%}
-            <td>{{ username }},<a href="{% url 'notes:logout' %}">Logout</a></td>
+            <td>{{ username }},<a href="{% url 'notes:logout' %}"><button class="mainbutton mainbuttonhover">Logout</button></a></td>
             {% else %}
-            <td><a href="{% url 'notes:login' %}">Login</a> </td>
+            <td><a href="{% url 'notes:login' %}"><button class="mainbutton mainbuttonhover">Login</button></a> </td>
         {% endif %}
-    <td><a href="{% url 'notes:user' %}">Sign Up</a></td>
+    <td><a href="{% url 'notes:user' %}"><button class="mainbutton mainbuttonhover">Sign in</button></a></td>
+        <td><button class="mainbutton mainbuttonhover">Hello</button></td>
     </tr>
 </table>
 </div>
 <hr>
-<h1 align="center">Here are my notes！</h1>
-<center><iframe src="time.html" frameborder="0" align="center" height="100" >
-</iframe>
-</center>
+<h1 align="center">Substitute website</h1>
 </body>
 {% block content%}
 {% endblock %}
