@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8" >
     <title>Notes</title>
+        <style>
+        .background{
+            background: url("/static/image/register.jpg");
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+            .button{
+            }
+    </style>
 </head>
-<body>
+<body class="background">
 {#<ul>#}
 {#    <li><a href="{% url 'notes:index' %}">Notes</a></li>#}
 {#    <li><a href="{% url 'notes:Topic' %}">Topics</a></li>#}
@@ -20,7 +29,7 @@
             {% else %}
             <td><a href="{% url 'notes:login' %}">Login</a> </td>
         {% endif %}
-    <td><a href="{% url 'notes:user' %}">Sign In</a></td>
+    <td><a href="{% url 'notes:user' %}">Sign Up</a></td>
     </tr>
 </table>
 </div>

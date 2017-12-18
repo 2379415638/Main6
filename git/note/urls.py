@@ -20,4 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'',include('notes.urls','notes')),
     url(r'^captcha/',include('captcha.urls')),
+   # url(r'^accounts/',include('registration.backends.hmac.urls',namespace = 'accounts')),
+
 ]
