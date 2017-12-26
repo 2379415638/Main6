@@ -8,17 +8,17 @@
 <body>
 {% block content %}
     {% if topic != None%}
-    <a href="{% url 'notes:del_topic' topic.id %}"><input type="button" value="Delete this topic"></a>
-    <a href="{% url 'notes:create_entry' topic.id%}"><input type="button" value="Add Entry"></a>
+    <a href="{% url 'notes:del_topic' topic.id %}"><input type="button" value="Delete" class="submitbutton submitbuttonhover"></a>
+    <a href="{% url 'notes:create_entry' topic.id%}"><input type="button" value="Add Record" class="submitbutton submitbuttonhover"></a>
     <ul>
     {% for entry in entries %}
-        <li><a href="{% url 'notes:entry' topic.id entry.id%}">{{ entry|truncatechars:15 }}...</a></li>
+        <li><a href="{% url 'notes:entry' topic.id entry.id%}" class="text">{{ entry|truncatechars:15 }}...</a></li>
         {% empty %}
-        No entry added recently.
+        No record added recently.
     {% endfor %}
     </ul>
     {% else %}
-        <p>The topic has been not exist!</p>
+        <p>The record has been not exist!</p>
     {% endif %}
 {% endblock %}
 </body>

@@ -6,12 +6,12 @@ class contentform(forms.ModelForm):
         model = models.Content
         fields = ['content',]
         labels = {'content': "Write your content:"}
-        widgets = {'content':forms.Textarea(attrs = {'cols': 185,'rows':25})}
+        widgets = {'content':forms.Textarea(attrs = {'cols': 185 , 'rows':25})}
 class topicform(forms.ModelForm):
     class Meta:
         model = models.Topic
         fields = ['topic',]
-        labels = {'topic':"Create your topic:",}
+        widgets = {'topic':forms.TextInput()}
 class Userform(forms.ModelForm):
     class Meta:
         model = models.User
@@ -25,13 +25,4 @@ class Login(forms.Form):
     mail = forms.CharField(label = "Mail:")
     password = forms.CharField(widget = forms.PasswordInput,label = "Pass:")
     captcha = CaptchaField(label = "")
-    def __init__(self,*args,**kwargs):
-        super(Login,self).__init__(*args,**kwargs)
-# class Register(forms.Form):
-#     id = forms.CharField()
-#     password = forms.CharField(widget = forms.PasswordInput)
-#     captcha = CaptchaField()
-#     def __init_(self,*args,**kwargs):
-#         super(Register,self)
-#
 

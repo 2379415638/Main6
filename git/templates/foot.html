@@ -10,11 +10,13 @@
 
         }
     </style>
+    <link rel="stylesheet" href="/static/index_base.css" type="text/css">
 </head>
 
 <body>
+{% load static %}
 <div id="temp" ></div>
-<center><footer><a href = {% url "notes:advice" %}>Advice</a></footer></center>
+<center><a style="text-decoration: none" href = {% url "notes:advice" %}>Advice</a></center>
 </body>
 {% block footer %}
 {% endblock %}

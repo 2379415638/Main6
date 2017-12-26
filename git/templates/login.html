@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+
 </head>
 {% extends 'base.html' %}
 <body>
 {% block content %}
-    <p align="center">Login</p>
+    <p align="center" class="font">LOGIN</p>
+    <div style="border: solid 1px;width: 600px;height:450px;padding-top: 50px;margin-left:450px;background-color: #5b80b2">
     <form  method="post" name="my form">
     {% csrf_token %}
-        <table align="center" border="1" cellspacing="0" cellpadding="0" width="350px" height="200px" background="/static/image/2.png">
+        <table align="center" border="1" cellspacing="0" cellpadding="0" width="350px" height="400px" style="background-color: transparent">
             <tr>
-                <td align="center">Mail:{{ form.mail }}</td>
+                <td style="padding-left: 50px">{{ form.mail }}</td>
             </tr>
             <tr>
-            <td align="center">Pass:{{ form.password }}</td>
+            <td style="padding-left: 50px">{{ form.password }}</td>
             </tr>
             <tr>
-                <td align="center">{{ form.captcha }}</td>
+                <td style="padding-left: 50px">{{ form.captcha }}</td>
             </tr>
             <tr>
                 <td align="center" ><input value="submit" type="submit" name="submit" class="submitbutton submitbuttonhover">
@@ -26,8 +28,8 @@
             </tr>
         </table>
 
-
     </form>
+    </div>
     {% if enabled == False %}
         <em>账号密码错误,请重试！</em>
         {% endif %}

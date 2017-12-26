@@ -10,18 +10,11 @@
     <form method="post" action={% url 'notes:create_topic' %}>
     {% csrf_token %}
     <center>
-        {{ form.as_p }}
+        Record:{{ form.topic }}
     </center>
         <br>
         <center>
-            &nbsp;
-             &nbsp;
-             &nbsp;
-             &nbsp;
-             &nbsp;
-             &nbsp;
-        <input type="submit" value="submit" align="center">
-    <input type="reset" value="reset">
+        <input type="submit" value="submit" align="center" class="submitbutton submitbuttonhover">
         </center>
     </form>
 {% endblock %}

@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Topic</title>
+    <link rel="stylesheet" href="/static/text.css" type="text/css">
 </head>
 {% extends 'base.html' %}
+{% load static %}
 <body>
 {% block content %}
-    <a href="{% url 'notes:create_topic' %}">Add a new Topic now!</a>
+    <div>
+    <a href="{% url 'notes:create_topic' %}" class="text"> New Record</a>
     <ul>
     {% for topic in topics %}
-        <li><a href="{% url 'notes:topic' topic.id %}"><b>{{ topic }}</b></a></li>
+        <li><a href="{% url 'notes:topic' topic.id %}" class="text"><b>{{ topic }}</b></a></li>
         {% empty %}
         No topics added recently.
     {% endfor %}
     </ul>
+    </div>
 {% endblock %}
 </body>
 </html>

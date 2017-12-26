@@ -4,7 +4,7 @@ from notes import models
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from . import forms
-from django.core.mail import EmailMessage
+from django.core.mail import send_mail
 from captcha.fields import CaptchaField
 # Create your views here.
 def usernamecheck(request):
@@ -185,11 +185,7 @@ def Advice(request):
         if form.is_valid():
             body = form.cleaned_data['advice']
             User = form.cleaned_data['mail']
-            EmailMessage( title,
-                          body,
-                          User,
-                          ['2379415638@qq.com']
-            ).send()
+            send_mail('Advice',body,'postmaster@seeksrq.top',[User,],fail_silently=False)
             return HttpResponseRedirect(reverse("notes:index"))
         else:
             response = "Failed"

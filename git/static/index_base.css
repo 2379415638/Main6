@@ -21,18 +21,21 @@
     font-weight: bold;
 }
 .submitbutton{
-    width: 100px;
+
     height: 35px;
     background-color:lightgray;
     border:0;
+    border-radius:10px;
+    width: 150px
 }
 .submitbuttonhover:hover{
-    width:100px;
+
     height:35px;
     background-color:gray;
     font-weight:bold;
+    border-radius:10px;
+    width: 150px
 }
 .headerdiv{
-  
    background-color: rgba(217,244,255,0.35);
 }

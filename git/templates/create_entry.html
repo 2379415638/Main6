@@ -9,10 +9,10 @@
 {% block content %}
     <form method="post">
     {% csrf_token %}
-       {{ form.as_p }}
+       {{ form.as_p}}
         <center>
-        <input value="submit" type="submit" name="submit">
-    <input name="resrt" type="reset" value="reset">
+        <input value="submit" type="submit" name="submit" class="submitbutton submitbuttonhover">
+    <input name="resrt" type="reset" value="reset" class="submitbutton submitbuttonhover">
         </center>
     </form>
 {% endblock %}

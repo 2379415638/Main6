@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8" >
     <title>Notes</title>
-    <link href="/static/base.css" rel="stylesheet" type="text/css">
+    <link href="/static/index_base.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/text.css" type="text/css">
 </head>
 <body class="background">
 <div class="headerdiv">
 <table class="font">
     <tr>
         <td><a href="{% url 'notes:index' %}"><button class="mainbutton mainbuttonhover">Site</button></a></td>
-        <td><a href="{% url 'notes:Topic' %}"><button class="mainbutton mainbuttonhover">Topics</button></a></td>
-        {% if username%}
+        <td><a href="{% url 'notes:Topic' %}"><button class="mainbutton mainbuttonhover">Record</button></a></td>
+        {% if username %}
             <td>{{ username }},<a href="{% url 'notes:logout' %}"><button class="mainbutton mainbuttonhover">Logout</button></a></td>
             {% else %}
             <td><a href="{% url 'notes:login' %}"><button class="mainbutton mainbuttonhover">Login</button></a> </td>
         {% endif %}
     <td><a href="{% url 'notes:user' %}"><button class="mainbutton mainbuttonhover">Sign in</button></a></td>
-        <td><button class="mainbutton mainbuttonhover">Hello</button></td>
+        <td><a href="" ><button class="mainbutton mainbuttonhover">Hello</button></a></td>
     </tr>
 </table>
 </div>

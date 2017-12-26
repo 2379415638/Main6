@@ -7,10 +7,11 @@
 {% extends 'base.html' %}
 <body>
 {% block content %}
-    <a href="{% url 'notes:edit_entry' topic.id entry.id%}"><input type="button" value="Edit"></a>
-    <a href="{% url 'notes:del_entry' topic.id entry.id %}"><input type="button" value="Delete"></a>
+    <a href="{% url 'notes:edit_entry' topic.id entry.id%}"><input type="button" value="Edit" class="submitbutton submitbuttonhover"></a>
+    <a href="{% url 'notes:del_entry' topic.id entry.id %}"><input type="button" value="Delete" class="submitbutton submitbuttonhover"></a>
     <ul>
-        <li><p>{{ entry }}        {{ entry.content_time }}</p></li>
+        <li><p>{{ entry }}</p></li>
+        <li><p>{{ entry.content_time }}</p></li>
     </ul>
 {% endblock %}
 </body>
